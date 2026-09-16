@@ -1,0 +1,32 @@
+.call-to-action {
+  padding: 32px 24px;
+  background-color: var(--light-color);
+  text-align: center;
+}
+
+.call-to-action h2,
+.call-to-action h3,
+.call-to-action h4 {
+  margin-top: 0;
+}
+
+.call-to-action p:last-child {
+  margin-bottom: 0;
+}
+
+.call-to-action a.button:any-link {
+  margin-top: 20px;
+  color: var(--background-color);
+  background-color: var(--link-color);
+}
+
+.call-to-action a.button:hover {
+  color: var(--background-color);
+  background-color: var(--link-hover-color);
+}
+
+@media (width >= 900px) {
+  .call-to-action {
+    padding: 48px 32px;
+  }
+}
