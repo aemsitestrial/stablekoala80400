@@ -214,5 +214,32 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "call-to-action",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Text",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Link Text"
+      }
+    ]
   }
 ]
