@@ -282,12 +282,14 @@
       {
         "component": "aem-content",
         "name": "link",
-        "label": "Link"
+        "label": "Link Page",
+        "multi": true
       },
       {
         "component": "text",
         "name": "linkText",
-        "label": "Link Text"
+        "label": "Link Text",
+        "multi": true
       }
     ]
   }

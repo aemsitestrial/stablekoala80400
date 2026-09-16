@@ -23,8 +23,8 @@ export default function decorate(block) {
     const cells = [...item.children];
     cells[0]?.classList.add('product-preview-name');
     cells[1]?.classList.add('product-preview-description');
+    cells[2]?.classList.add('product-preview-links');
 
-    const link = item.querySelector('a');
-    if (link) decorateLink(link);
+    item.querySelectorAll('a').forEach(decorateLink);
   });
 }

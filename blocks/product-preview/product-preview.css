@@ -51,6 +51,16 @@
   font-size: 13px;
 }
 
+.product-preview .product-preview-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-preview .product-preview-links > * {
+  margin: 0;
+}
+
 .product-preview .product-preview-link:any-link {
   display: inline-flex;
   align-items: center;
