@@ -241,5 +241,54 @@
         "label": "Link Text"
       }
     ]
+  },
+  {
+    "id": "product-preview",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "View All Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "View All Link Text"
+      }
+    ]
+  },
+  {
+    "id": "product-preview-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Product Name",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Link Text"
+      }
+    ]
   }
 ]
