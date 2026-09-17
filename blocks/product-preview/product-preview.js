@@ -1,30 +1,75 @@
-function decorateLink(link) {
-  link.classList.add('product-preview-link');
-
-  const arrow = document.createElement('span');
-  arrow.className = 'product-preview-arrow';
-  arrow.setAttribute('aria-hidden', 'true');
-  link.append(arrow);
-}
+import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
-  const [header, ...items] = block.children;
-  if (!header) return;
+  const rows = [...block.children];
 
-  header.classList.add('product-preview-header');
-  header.firstElementChild?.classList.add('product-preview-heading');
+  if (!rows.length) return;
 
-  const headerLink = header.querySelector('a');
-  if (headerLink) decorateLink(headerLink);
+  const firstRow = rows[0];
+  const cells = [...firstRow.children];
 
-  items.forEach((item) => {
-    item.classList.add('product-preview-item');
+  const sectionTitle =
+    cells[0]?.textContent?.trim() || 'Product Preview';
 
-    const cells = [...item.children];
-    cells[0]?.classList.add('product-preview-name');
-    cells[1]?.classList.add('product-preview-description');
-    cells[2]?.classList.add('product-preview-links');
+  const viewAllLabel =
+    cells[1]?.textContent?.trim() || 'View all Products';
 
-    item.querySelectorAll('a').forEach(decorateLink);
+  const viewAllLink =
+    cells[2]?.textContent?.trim() || '#';
+
+  const wrapper = document.createElement('div');
+
+  const header = document.createElement('div');
+  header.className = 'product-preview-header';
+
+  header.innerHTML = `
+    <h2 class="product-preview-title">${sectionTitle}</h2>
+    ${viewAllLink}
+      ${viewAllLabel} →
+    </a>
+  `;
+
+  wrapper.append(header);
+
+  const list = document.createElement('div');
+  list.className = 'product-preview-list';
+
+  rows.forEach((row) => {
+    const cols = [...row.children];
+
+    const productName = cols[3]?.textContent?.trim();
+    const description = cols[4]?.textContent?.trim();
+    const ctaLabel = cols[5]?.textContent?.trim();
+    const ctaLink = cols[6]?.textContent?.trim();
+
+    if (!productName) return;
+
+    const item = document.createElement('div');
+    item.className = 'product-preview-item';
+
+    moveInstrumentation(row, item);
+
+    item.innerHTML = `
+      <div class="product-preview-name">
+        ${productName}
+      </div>
+
+      <div class="product-preview-description">
+        ${description || ''}
+      </div>
+
+      <div class="product-preview-cta">
+        ${ctaLink || '#'}
+          ${ctaLabel || 'Learn More'} →
+        </a>
+      </div>
+    `;
+
+    list.append(item);
   });
+
+  wrapper.append(list);
+
+  block.textContent = '';
+  block.append(wrapper);
 }

@@ -1,137 +1,94 @@
 .product-preview {
-  color: #272727;
-  font-size: 14px;
-  line-height: 1.35;
-}
-
-.product-preview .product-preview-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 4px 0 25px;
-}
-
-.product-preview .product-preview-heading {
-  font-size: 26px;
-  line-height: 1.2;
-}
-
-.product-preview .product-preview-heading > * {
-  margin: 0;
-  font: inherit;
-}
-
-.product-preview .product-preview-item {
+  max-width: 1440px;
+  min-height: 531px;
+  background: #ffffff;
+  margin: 0 auto;
+  padding: 64px;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: minmax(120px, 20%) minmax(240px, 1fr) max-content;
-  gap: 28px;
-  align-items: center;
-  min-height: 74px;
-  border-bottom: 1px solid #8d8d8d;
-  padding: 0 2px;
 }
 
-.product-preview .product-preview-name {
-  font-size: 25px;
-  line-height: 1.15;
-}
-
-.product-preview .product-preview-name sup {
-  font-size: 55%;
-}
-
-.product-preview .product-preview-name > *,
-.product-preview .product-preview-description > * {
-  margin: 0;
-}
-
-.product-preview .product-preview-description {
-  font-size: 13px;
-}
-
-.product-preview .product-preview-links {
+.product-preview-header {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.product-preview .product-preview-links > * {
-  margin: 0;
-}
-
-.product-preview .product-preview-link:any-link {
-  display: inline-flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 14px;
-  color: inherit;
-  font-size: 13px;
-  line-height: 1.25;
+  margin-bottom: 48px;
+}
+
+.product-preview-title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  color: #1f1f1f;
+}
+
+.product-preview-view-all {
+  font-size: 20px;
   text-decoration: none;
-  white-space: nowrap;
+  color: #1f1f1f;
 }
 
-.product-preview .product-preview-link:hover,
-.product-preview .product-preview-link:focus-visible {
+.product-preview-list {
+  width: 100%;
+}
+
+.product-preview-item {
+  display: grid;
+  grid-template-columns: 260px 1fr 250px;
+  gap: 48px;
+  padding: 36px 0;
+  border-bottom: 1px solid #b7b7b7;
+  align-items: center;
+}
+
+.product-preview-name {
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 400;
+  color: #1f1f1f;
+}
+
+.product-preview-description {
+  font-size: 18px;
+  line-height: 28px;
+  color: #333333;
+}
+
+.product-preview-cta {
+  justify-self: end;
+}
+
+.product-preview-cta a {
+  font-size: 24px;
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
+.product-preview-cta a:hover,
+.product-preview-view-all:hover {
   text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
-.product-preview .product-preview-arrow {
-  position: relative;
-  display: inline-block;
-  flex: 0 0 17px;
-  width: 17px;
-  height: 14px;
-  transition: transform 160ms ease;
-}
-
-.product-preview .product-preview-arrow::before {
-  position: absolute;
-  top: 6px;
-  right: 0;
-  width: 16px;
-  border-top: 1px solid currentcolor;
-  content: '';
-}
-
-.product-preview .product-preview-arrow::after {
-  position: absolute;
-  top: 2px;
-  right: 0;
-  width: 8px;
-  height: 8px;
-  border-top: 1px solid currentcolor;
-  border-right: 1px solid currentcolor;
-  content: '';
-  transform: rotate(45deg);
-}
-
-.product-preview .product-preview-link:hover .product-preview-arrow,
-.product-preview .product-preview-link:focus-visible .product-preview-arrow {
-  transform: translateX(3px);
-}
-
-@media (width < 700px) {
-  .product-preview .product-preview-header {
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 12px 20px;
-    padding-bottom: 18px;
-  }
-
-  .product-preview .product-preview-heading {
-    font-size: 23px;
-  }
-
-  .product-preview .product-preview-item {
+@media (max-width: 900px) {
+  .product-preview-item {
     grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 20px 0;
+    row-gap: 16px;
   }
 
-  .product-preview .product-preview-name {
-    font-size: 23px;
+  .product-preview-cta {
+    justify-self: start;
+  }
+
+  .product-preview-title {
+    font-size: 32px;
+  }
+
+  .product-preview-name {
+    font-size: 38px;
+  }
+
+  .product-preview-description,
+  .product-preview-cta a {
+    font-size: 18px;
   }
 }
