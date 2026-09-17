@@ -48,7 +48,8 @@
         "button",
         "title",
         "hero",
-          "call-to-action",
+        "call-to-action",
+        "career-audience",
         "cards",
         "columns",
         "fragment"
