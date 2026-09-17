@@ -3,8 +3,8 @@
     height: 920px;
     margin: 0 auto;
     padding: 120px 80px;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     box-sizing: border-box;
 }
 
@@ -24,7 +24,7 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 12px;
 }
 
@@ -33,14 +33,14 @@
     font-size: 48px;
     line-height: 56px;
     font-weight: 400;
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 40px;
 }
 
 .career-audience-description {
     font-size: 20px;
     line-height: 32px;
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 72px;
 }
 
@@ -55,7 +55,7 @@
     justify-content: space-between;
     align-items: center;
     width: 420px;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     font-weight: 400;
