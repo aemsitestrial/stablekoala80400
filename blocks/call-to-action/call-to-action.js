@@ -3,20 +3,12 @@ export default function decorate(block) {
   if (!row) return;
 
   const cells = [...row.children];
-  const eyebrowText = cells[0]?.textContent.trim();
-  const headingText = cells[1]?.textContent.trim() || 'Ready to get started?';
-  const descriptionText = cells[2]?.textContent.trim();
-  const actionLinks = cells[3]?.querySelectorAll('a') || [];
+  const headingText = cells[0]?.textContent.trim() || 'Ready to Partner';
+  const descriptionText = cells[1]?.textContent.trim();
+  const actionLinks = cells[2]?.querySelectorAll('a') || [];
 
   const content = document.createElement('div');
   content.className = 'call-to-action-content';
-
-  if (eyebrowText) {
-    const eyebrow = document.createElement('p');
-    eyebrow.className = 'call-to-action-eyebrow';
-    eyebrow.textContent = eyebrowText;
-    content.append(eyebrow);
-  }
 
   const heading = document.createElement('h2');
   heading.textContent = headingText;
@@ -38,6 +30,7 @@ export default function decorate(block) {
     link.className = `call-to-action-button ${variant}`;
     link.href = sourceLink.href;
     link.textContent = sourceLink.textContent.trim();
+    if (index === 0) link.append(' \u2192');
     actions.append(link);
   });
 

@@ -22,16 +22,9 @@
       "fields": [
         {
           "component": "text",
-          "name": "eyebrow",
-          "label": "Eyebrow",
-          "value": "",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
           "name": "heading",
           "label": "Heading",
-          "value": "Ready to get started?",
+          "value": "Ready to Partner",
           "valueType": "string"
         },
         {
