@@ -41,6 +41,30 @@
           "component": "text",
           "name": "linkText",
           "label": "Link Text"
+        },
+        {
+          "component": "text",
+          "name": "backgroundColor",
+          "label": "Background Color",
+          "value": "#ffffff"
+        },
+        {
+          "component": "text",
+          "name": "textColor",
+          "label": "Text Color",
+          "value": "#252525"
+        },
+        {
+          "component": "text",
+          "name": "buttonColor",
+          "label": "Button Color",
+          "value": "#252525"
+        },
+        {
+          "component": "text",
+          "name": "buttonTextColor",
+          "label": "Button Text Color",
+          "value": "#ffffff"
         }
       ]
     }
