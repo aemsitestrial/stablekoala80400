@@ -22,12 +22,16 @@ export default function decorate(block) {
   const header = document.createElement('div');
   header.className = 'product-preview-header';
 
-  header.innerHTML = `
-    <h2 class="product-preview-title">${sectionTitle}</h2>
-    ${viewAllLink}
-      ${viewAllLabel} →
-    </a>
-  `;
+  const title = document.createElement('h2');
+  title.className = 'product-preview-title';
+  title.textContent = sectionTitle;
+  header.append(title);
+
+  const viewAll = document.createElement('a');
+  viewAll.className = 'product-preview-view-all';
+  viewAll.href = viewAllLink;
+  viewAll.textContent = `${viewAllLabel} →`;
+  header.append(viewAll);
 
   wrapper.append(header);
 
@@ -49,21 +53,23 @@ export default function decorate(block) {
 
     moveInstrumentation(row, item);
 
-    item.innerHTML = `
-      <div class="product-preview-name">
-        ${productName}
-      </div>
+    const name = document.createElement('div');
+    name.className = 'product-preview-name';
+    name.textContent = productName;
+    item.append(name);
 
-      <div class="product-preview-description">
-        ${description || ''}
-      </div>
+    const productDescription = document.createElement('div');
+    productDescription.className = 'product-preview-description';
+    productDescription.textContent = description || '';
+    item.append(productDescription);
 
-      <div class="product-preview-cta">
-        ${ctaLink || '#'}
-          ${ctaLabel || 'Learn More'} →
-        </a>
-      </div>
-    `;
+    const cta = document.createElement('div');
+    cta.className = 'product-preview-cta';
+    const ctaLinkElement = document.createElement('a');
+    ctaLinkElement.href = ctaLink || '#';
+    ctaLinkElement.textContent = `${ctaLabel || 'Learn More'} →`;
+    cta.append(ctaLinkElement);
+    item.append(cta);
 
     list.append(item);
   });
