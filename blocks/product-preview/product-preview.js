@@ -8,14 +8,11 @@ export default function decorate(block) {
   const firstRow = rows[0];
   const cells = [...firstRow.children];
 
-  const sectionTitle =
-    cells[0]?.textContent?.trim() || 'Product Preview';
+  const sectionTitle = cells[0]?.textContent?.trim() || 'Product Preview';
 
-  const viewAllLabel =
-    cells[1]?.textContent?.trim() || 'View all Products';
+  const viewAllLabel = cells[1]?.textContent?.trim() || 'View all Products';
 
-  const viewAllLink =
-    cells[2]?.textContent?.trim() || '#';
+  const viewAllLink = cells[2]?.textContent?.trim() || '#';
 
   const wrapper = document.createElement('div');
 
