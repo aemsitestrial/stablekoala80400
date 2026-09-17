@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+.call-to-action-content {
+  max-width: 720px;
+}
+
 .call-to-action h2,
 .call-to-action h3,
 .call-to-action h4 {
@@ -12,6 +16,16 @@
 
 .call-to-action p:last-child {
   margin-bottom: 0;
+}
+
+.call-to-action-text {
+  margin: 8px 0 0;
+  font-size: var(--body-font-size-s);
+  line-height: 1.4;
+}
+
+.call-to-action-text>* {
+  margin: 0;
 }
 
 .call-to-action a.button:any-link {
@@ -25,8 +39,20 @@
   background-color: var(--link-hover-color);
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   .call-to-action {
     padding: 48px 32px;
+    min-height: 531px;
+    padding: 64px 32px;
+  }
+
+  .call-to-action h2,
+  .call-to-action h3,
+  .call-to-action h4 {
+    font-size: 40px;
+  }
+
+  .call-to-action-text {
+    font-size: 20px;
   }
 }
