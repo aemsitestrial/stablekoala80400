@@ -15,15 +15,19 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "call-to-action",
-      "product-preview"
+      "fragment"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "career-audience",
+    "components": [
+      "career-audience-item"
     ]
   },
   {
@@ -44,7 +48,7 @@
   {
     "id": "product-preview",
     "components": [
-      "product-preview-item"
+      "product-item"
     ]
   }
 ]

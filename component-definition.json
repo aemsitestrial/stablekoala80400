@@ -113,6 +113,37 @@
           }
         },
         {
+          "title": "Career Audience",
+          "id": "career-audience",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Career Audience",
+                  "model": "career-audience",
+                  "filter": "career-audience"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Career Audience Item",
+          "id": "career-audience-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Career Audience Item",
+                  "model": "career-audience-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Columns",
           "id": "columns",
           "plugins": {
@@ -158,21 +189,6 @@
           }
         },
         {
-          "title": "Call to Action",
-          "id": "call-to-action",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Call to Action",
-                  "model": "call-to-action"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Product Preview",
           "id": "product-preview",
           "plugins": {
@@ -189,15 +205,15 @@
           }
         },
         {
-          "title": "Product Preview Item",
-          "id": "product-preview-item",
+          "title": "Product Item",
+          "id": "product-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Product Preview Item",
-                  "model": "product-preview-item"
+                  "name": "Product Item",
+                  "model": "product-item"
                 }
               }
             }

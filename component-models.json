@@ -161,6 +161,51 @@
     ]
   },
   {
+    "id": "career-audience",
+    "fields": [
+      {
+        "component": "text",
+        "name": "overline",
+        "label": "Overline",
+        "value": "Overline"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "value": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "career-audience-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "CTA Text"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "CTA Link"
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -216,80 +261,61 @@
     ]
   },
   {
-    "id": "call-to-action",
-    "fields": [
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "label": "Text",
-        "value": "",
-        "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Link Text"
-      }
-    ]
-  },
-  {
     "id": "product-preview",
     "fields": [
       {
         "component": "text",
         "name": "title",
-        "label": "Title"
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "View All Link"
+        "label": "Title",
+        "value": "Product Preview",
+        "valueType": "string"
       },
       {
         "component": "text",
-        "name": "linkText",
-        "label": "View All Link Text"
+        "name": "viewAllLink",
+        "label": "View All Link",
+        "value": "#",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "viewAllLabel",
+        "label": "View All Link Text",
+        "value": "View all Products",
+        "valueType": "string"
       }
     ]
   },
   {
-    "id": "product-preview-item",
+    "id": "product-item",
     "fields": [
       {
-        "component": "richtext",
-        "name": "title",
+        "component": "text",
+        "name": "productName",
         "label": "Product Name",
         "value": "",
         "valueType": "string"
       },
       {
-        "component": "richtext",
+        "component": "textarea",
         "name": "description",
         "label": "Description",
         "value": "",
         "valueType": "string"
       },
       {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link Page",
-        "multi": true
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Text",
+        "value": "",
+        "valueType": "string"
       },
       {
         "component": "text",
-        "name": "linkText",
-        "label": "Link Text",
-        "multi": true
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "value": "#",
+        "valueType": "string"
       }
     ]
   }
