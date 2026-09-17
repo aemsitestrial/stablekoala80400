@@ -1,7 +1,7 @@
 .product-preview {
   max-width: 1440px;
   min-height: 531px;
-  background: #ffffff;
+  background: #fff;
   margin: 0 auto;
   padding: 64px;
   box-sizing: border-box;
@@ -51,7 +51,7 @@
 .product-preview-description {
   font-size: 18px;
   line-height: 28px;
-  color: #333333;
+  color: #333;
 }
 
 .product-preview-cta {
@@ -69,7 +69,7 @@
   text-decoration: underline;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .product-preview-item {
     grid-template-columns: 1fr;
     row-gap: 16px;
