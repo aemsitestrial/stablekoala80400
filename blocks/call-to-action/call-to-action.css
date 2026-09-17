@@ -10,7 +10,7 @@
   text-align: center;
 }
 
-.call-to-action > div {
+.call-to-action-content {
   max-width: 720px;
 }
 
@@ -25,10 +25,14 @@
   line-height: 1.2;
 }
 
-.call-to-action p {
+.call-to-action-text {
   margin: 8px 0 0;
   font-size: var(--body-font-size-s);
   line-height: 1.4;
+}
+
+.call-to-action-text > * {
+  margin: 0;
 }
 
 .call-to-action a.button:any-link {
@@ -69,7 +73,7 @@
     font-size: 40px;
   }
 
-  .call-to-action p {
+  .call-to-action-text {
     font-size: 20px;
   }
 }
