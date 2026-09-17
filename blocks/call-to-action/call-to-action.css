@@ -1,75 +1,32 @@
 .call-to-action {
-  display: flex;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  min-height: 360px;
-  padding: 48px 24px;
-  background-color: var(--cta-background-color, #fff);
-  color: var(--cta-text-color, #252525);
+  padding: 32px 24px;
+  background-color: var(--light-color);
   text-align: center;
-}
-
-.call-to-action > div {
-  max-width: 720px;
 }
 
 .call-to-action h2,
 .call-to-action h3,
 .call-to-action h4 {
-  margin: 0;
-  color: inherit;
-  font-family: var(--body-font-family);
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 1.2;
+  margin-top: 0;
 }
 
-.call-to-action p {
-  margin: 8px 0 0;
-  font-size: var(--body-font-size-s);
-  line-height: 1.4;
+.call-to-action p:last-child {
+  margin-bottom: 0;
 }
 
 .call-to-action a.button:any-link {
-  margin: 24px 0 0;
-  border: 0;
-  border-radius: 0;
-  padding: 8px 10px;
-  color: var(--cta-button-text-color, #fff);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.25;
-  background-color: var(--cta-button-color, #252525);
+  margin-top: 20px;
+  color: var(--background-color);
+  background-color: var(--link-color);
 }
 
-.call-to-action a.button::after {
-  margin-left: 10px;
-  content: '\2192';
-  font-size: 16px;
-  vertical-align: -1px;
-}
-
-.call-to-action a.button:hover,
-.call-to-action a.button:focus {
-  color: var(--cta-button-text-color, #fff);
-  background-color: var(--cta-button-color, #252525);
-  filter: brightness(0.85);
+.call-to-action a.button:hover {
+  color: var(--background-color);
+  background-color: var(--link-hover-color);
 }
 
 @media (width >= 900px) {
   .call-to-action {
-    min-height: 531px;
-    padding: 64px 32px;
-  }
-
-  .call-to-action h2,
-  .call-to-action h3,
-  .call-to-action h4 {
-    font-size: 40px;
-  }
-
-  .call-to-action p {
-    font-size: 20px;
+    padding: 48px 32px;
   }
 }
