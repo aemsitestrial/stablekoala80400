@@ -142,6 +142,56 @@
     ]
   },
   {
+    "id": "call-to-action",
+    "fields": [
+      {
+        "component": "text",
+        "name": "eyebrow",
+        "label": "Eyebrow",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "value": "Ready to get started?",
+        "valueType": "string"
+      },
+      {
+        "component": "textarea",
+        "name": "description",
+        "label": "Description",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "primaryLabel",
+        "label": "Primary CTA text",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "primaryLink",
+        "label": "Primary CTA link"
+      },
+      {
+        "component": "text",
+        "name": "secondaryLabel",
+        "label": "Secondary CTA text",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "secondaryLink",
+        "label": "Secondary CTA link"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
