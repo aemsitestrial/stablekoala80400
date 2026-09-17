@@ -6,10 +6,7 @@ export default function decorate(block) {
   const eyebrowText = cells[0]?.textContent.trim();
   const headingText = cells[1]?.textContent.trim() || 'Ready to get started?';
   const descriptionText = cells[2]?.textContent.trim();
-  const primaryLabel = cells[3]?.textContent.trim();
-  const primaryHref = cells[4]?.textContent.trim();
-  const secondaryLabel = cells[5]?.textContent.trim();
-  const secondaryHref = cells[6]?.textContent.trim();
+  const actionLinks = cells[3]?.querySelectorAll('a') || [];
 
   const content = document.createElement('div');
   content.className = 'call-to-action-content';
@@ -35,15 +32,14 @@ export default function decorate(block) {
   const actions = document.createElement('div');
   actions.className = 'call-to-action-actions';
 
-  [[primaryLabel, primaryHref, 'primary'], [secondaryLabel, secondaryHref, 'secondary']]
-    .filter(([label]) => label)
-    .forEach(([label, href, variant]) => {
-      const link = document.createElement('a');
-      link.className = `call-to-action-button ${variant}`;
-      link.href = href || '#';
-      link.textContent = label;
-      actions.append(link);
-    });
+  [...actionLinks].slice(0, 2).forEach((sourceLink, index) => {
+    const link = document.createElement('a');
+    const variant = index === 0 ? 'primary' : 'secondary';
+    link.className = `call-to-action-button ${variant}`;
+    link.href = sourceLink.href;
+    link.textContent = sourceLink.textContent.trim();
+    actions.append(link);
+  });
 
   if (actions.children.length) content.append(actions);
 

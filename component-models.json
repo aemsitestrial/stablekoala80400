@@ -166,28 +166,11 @@
         "valueType": "string"
       },
       {
-        "component": "text",
-        "name": "primaryLabel",
-        "label": "Primary CTA text",
+        "component": "richtext",
+        "name": "actions",
+        "label": "Actions",
         "value": "",
         "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "primaryLink",
-        "label": "Primary CTA link"
-      },
-      {
-        "component": "text",
-        "name": "secondaryLabel",
-        "label": "Secondary CTA text",
-        "value": "",
-        "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "secondaryLink",
-        "label": "Secondary CTA link"
       }
     ]
   },
