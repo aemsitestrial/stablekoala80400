@@ -21,16 +21,16 @@
       "id": "call-to-action",
       "fields": [
         {
-          "component": "text",
-          "name": "title",
-          "label": "Title"
-        },
-        {
           "component": "richtext",
           "name": "text",
           "label": "Text",
           "value": "",
           "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Title"
         },
         {
           "component": "aem-content",
