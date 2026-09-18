@@ -142,6 +142,39 @@
     ]
   },
   {
+    "id": "product-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "productName",
+        "label": "Product Name",
+        "value": "BaNCS™"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": "Modernise Banking for the Age of Intelligence: Support transformation across banking, payments and financial services..."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaText",
+        "label": "CTA Text",
+        "value": "Explore BaNCS"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "value": "/products/bancs"
+      }
+    ]
+  },
+  {
     "id": "call-to-action",
     "fields": [
       {
@@ -213,21 +246,28 @@
         "name": "image",
         "label": "Image",
         "multi": false
-      }
-    ]
-  },
-  {
-    "id": "career-audience-item",
-    "fields": [
+      },
       {
         "component": "text",
-        "name": "linkText",
-        "label": "CTA Text"
+        "name": "cta1Text",
+        "label": "CTA 1 Text",
+        "value": "I'm a graduate"
       },
       {
         "component": "aem-content",
-        "name": "link",
-        "label": "CTA Link"
+        "name": "cta1Link",
+        "label": "CTA 1 Link"
+      },
+      {
+        "component": "text",
+        "name": "cta2Text",
+        "label": "CTA 2 Text",
+        "value": "I'm an experienced professional"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta2Link",
+        "label": "CTA 2 Link"
       }
     ]
   },
@@ -287,61 +327,28 @@
     ]
   },
   {
-    "id": "product-preview",
+    "id": "products-platforms",
     "fields": [
       {
         "component": "text",
-        "name": "title",
-        "label": "Title",
-        "value": "Product Preview",
-        "valueType": "string"
+        "valueType": "string",
+        "name": "sectionTitle",
+        "label": "Section Title",
+        "value": "Products & Platforms"
       },
       {
         "component": "text",
+        "valueType": "string",
+        "name": "viewAllLabel",
+        "label": "View All Label",
+        "value": "View all Products"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
         "name": "viewAllLink",
         "label": "View All Link",
-        "value": "#",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "viewAllLabel",
-        "label": "View All Link Text",
-        "value": "View all Products",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "product-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "productName",
-        "label": "Product Name",
-        "value": "",
-        "valueType": "string"
-      },
-      {
-        "component": "textarea",
-        "name": "description",
-        "label": "Description",
-        "value": "",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "ctaLabel",
-        "label": "CTA Text",
-        "value": "",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "ctaLink",
-        "label": "CTA Link",
-        "value": "#",
-        "valueType": "string"
+        "value": "/products"
       }
     ]
   }

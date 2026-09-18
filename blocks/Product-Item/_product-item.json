@@ -1,0 +1,55 @@
+{
+  "definitions": [
+    {
+      "title": "Product Item",
+      "id": "product-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Product Item",
+              "model": "product-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-item",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "productName",
+          "label": "Product Name",
+          "value": "BaNCS™"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "description",
+          "label": "Description",
+          "value": "Modernise Banking for the Age of Intelligence: Support transformation across banking, payments and financial services..."
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "ctaText",
+          "label": "CTA Text",
+          "value": "Explore BaNCS"
+        },
+        {
+          "component": "aem-content",
+          "valueType": "string",
+          "name": "ctaLink",
+          "label": "CTA Link",
+          "value": "/products/bancs"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

@@ -1,7 +1,19 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
-  const rows = [...block.children];
+  const cells = [...block.children];
+
+  const overline = cells[0]?.textContent?.trim() || 'Overline';
+  const title = cells[1]?.textContent?.trim() || 'Title';
+  const description = cells[2]?.innerHTML || '';
+
+  const image = cells[3]?.querySelector('img');
+
+  const cta1Text = cells[4]?.textContent?.trim();
+  const cta1Link = cells[5]?.textContent?.trim();
+
+  const cta2Text = cells[6]?.textContent?.trim();
+  const cta2Link = cells[7]?.textContent?.trim();
 
   const wrapper = document.createElement('div');
   wrapper.className = 'career-audience-wrapper';
@@ -9,43 +21,35 @@ export default function decorate(block) {
   const content = document.createElement('div');
   content.className = 'career-audience-content';
 
-  const imageContainer = document.createElement('div');
-  imageContainer.className = 'career-audience-image';
-
-  const linksContainer = document.createElement('div');
-  linksContainer.className = 'career-audience-links';
-
-  const firstRow = rows[0];
-  const cells = [...firstRow.children];
-
-  const overline = cells[0]?.textContent?.trim() || 'Overline';
-  const title = cells[1]?.textContent?.trim() || 'Title';
-  const description = cells[2]?.innerHTML || '';
-
-  const image = firstRow.querySelector('img');
-
   content.innerHTML = `
     <div class="career-audience-overline">${overline}</div>
     <h2 class="career-audience-title">${title}</h2>
     <div class="career-audience-description">${description}</div>
   `;
 
-  rows.slice(1).forEach((row) => {
-    const cols = [...row.children];
+  const links = document.createElement('div');
+  links.className = 'career-audience-links';
 
-    const text = cols[0]?.textContent?.trim();
-    const href = cols[1]?.textContent?.trim();
+  if (cta1Text) {
+    links.innerHTML += `
+      ${cta1Link || '#'}
+        ${cta1Text}
+      </a>
+    `;
+  }
 
-    if (text) {
-      const link = document.createElement('a');
-      link.className = 'career-audience-link';
-      link.href = href || '#';
-      link.textContent = text;
-      linksContainer.append(link);
-    }
-  });
+  if (cta2Text) {
+    links.innerHTML += `
+      ${cta2Link || '#'}
+        ${cta2Text}
+      </a>
+    `;
+  }
 
-  content.append(linksContainer);
+  content.append(links);
+
+  const imageContainer = document.createElement('div');
+  imageContainer.className = 'career-audience-image';
 
   if (image) {
     imageContainer.append(

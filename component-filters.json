@@ -17,19 +17,14 @@
       "career-audience",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "products-platforms"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
-    ]
-  },
-  {
-    "id": "career-audience",
-    "components": [
-      "career-audience-item"
     ]
   },
   {
@@ -48,7 +43,7 @@
     ]
   },
   {
-    "id": "product-preview",
+    "id": "products-platforms",
     "components": [
       "product-item"
     ]

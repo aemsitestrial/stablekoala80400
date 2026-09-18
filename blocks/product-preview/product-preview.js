@@ -1,78 +1,49 @@
-import { moveInstrumentation } from '../../scripts/scripts.js';
-
 export default function decorate(block) {
   const rows = [...block.children];
 
-  if (!rows.length) return;
+  if (rows.length < 3) return;
 
-  const firstRow = rows[0];
-  const cells = [...firstRow.children];
+  const title = rows[0].textContent.trim();
+  const viewAllLabel = rows[1].textContent.trim();
 
-  const sectionTitle = cells[0]?.textContent?.trim() || 'Product Preview';
+  let viewAllHref = '#';
 
-  const viewAllLabel = cells[1]?.textContent?.trim() || 'View all Products';
+  const link = rows[2].querySelector('a');
 
-  const viewAllLink = cells[2]?.textContent?.trim() || '#';
-
-  const wrapper = document.createElement('div');
+  if (link) {
+    viewAllHref = link.href;
+  } else if (rows[2].textContent.trim()) {
+    viewAllHref = rows[2].textContent.trim();
+  }
 
   const header = document.createElement('div');
-  header.className = 'product-preview-header';
+  header.className = 'products-platforms-header';
 
-  const title = document.createElement('h2');
-  title.className = 'product-preview-title';
-  title.textContent = sectionTitle;
-  header.append(title);
+  const headTitle = document.createElement('h2');
+  headTitle.className = 'products-platforms-title';
+  headTitle.textContent = title;
 
   const viewAll = document.createElement('a');
-  viewAll.className = 'product-preview-view-all';
-  viewAll.href = viewAllLink;
-  viewAll.textContent = `${viewAllLabel} →`;
-  header.append(viewAll);
+  viewAll.className = 'products-platforms-view-all';
+  viewAll.href = viewAllHref;
+  viewAll.textContent = viewAllLabel;
 
-  wrapper.append(header);
+  const arrow = document.createElement('span');
+  arrow.className = 'products-platforms-arrow';
+  arrow.setAttribute('aria-hidden', 'true');
+  arrow.textContent = '→';
 
-  const list = document.createElement('div');
-  list.className = 'product-preview-list';
+  viewAll.append(arrow);
+  header.append(title, viewAll);
 
-  rows.forEach((row) => {
-    const cols = [...row.children];
+  const productList = document.createElement('div');
+  productList.className = 'products-platforms-list';
 
-    const productName = cols[3]?.textContent?.trim();
-    const description = cols[4]?.textContent?.trim();
-    const ctaLabel = cols[5]?.textContent?.trim();
-    const ctaLink = cols[6]?.textContent?.trim();
+  const productItems = [...block.querySelectorAll(':scope > .product-item')];
 
-    if (!productName) return;
-
-    const item = document.createElement('div');
-    item.className = 'product-preview-item';
-
-    moveInstrumentation(row, item);
-
-    const name = document.createElement('div');
-    name.className = 'product-preview-name';
-    name.textContent = productName;
-    item.append(name);
-
-    const productDescription = document.createElement('div');
-    productDescription.className = 'product-preview-description';
-    productDescription.textContent = description || '';
-    item.append(productDescription);
-
-    const cta = document.createElement('div');
-    cta.className = 'product-preview-cta';
-    const ctaLinkElement = document.createElement('a');
-    ctaLinkElement.href = ctaLink || '#';
-    ctaLinkElement.textContent = `${ctaLabel || 'Learn More'} →`;
-    cta.append(ctaLinkElement);
-    item.append(cta);
-
-    list.append(item);
+  productItems.forEach((item) => {
+    productList.append(item);
   });
 
-  wrapper.append(list);
-
-  block.textContent = '';
-  block.append(wrapper);
+  block.replaceChildren(header, productList);
 }
