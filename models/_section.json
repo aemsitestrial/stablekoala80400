@@ -49,11 +49,10 @@
         "title",
         "hero",
         "call-to-action",
-        "career-audience",
         "cards",
         "columns",
         "fragment",
-        "products-platforms",
+        "product-platform",
         "explore-card",
         "overline-card"
       ]

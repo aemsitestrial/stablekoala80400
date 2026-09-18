@@ -14,11 +14,10 @@
       "title",
       "hero",
       "call-to-action",
-      "career-audience",
       "cards",
       "columns",
       "fragment",
-      "products-platforms",
+      "product-platform",
       "explore-card",
       "overline-card"
     ]
@@ -42,6 +41,13 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "product-platform",
+    "components": [
+      "product-platform-header",
+      "product-platform-item"
     ]
   }
 ]
