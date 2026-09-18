@@ -274,5 +274,39 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "overline-card",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "overline",
+        "label": "Overline",
+        "value": "Overline"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": "Title"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Description and Links",
+        "description": "Add the description first, then add each link as a separate linked paragraph.",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
   }
 ]

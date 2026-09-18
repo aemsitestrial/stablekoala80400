@@ -54,7 +54,8 @@
         "columns",
         "fragment",
         "products-platforms",
-        "explore-card"
+        "explore-card",
+        "overline-card"
       ]
     }
   ]
