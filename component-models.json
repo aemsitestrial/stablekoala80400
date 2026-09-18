@@ -161,7 +161,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "ctaText",
+        "name": "text",
         "label": "CTA Text",
         "value": "Explore BaNCS"
       },
@@ -216,58 +216,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "career-audience",
-    "fields": [
-      {
-        "component": "text",
-        "name": "overline",
-        "label": "Overline",
-        "value": "Overline"
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title",
-        "value": "Title"
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "label": "Description",
-        "value": "",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "cta1Text",
-        "label": "CTA 1 Text",
-        "value": "I'm a graduate"
-      },
-      {
-        "component": "aem-content",
-        "name": "cta1Link",
-        "label": "CTA 1 Link"
-      },
-      {
-        "component": "text",
-        "name": "cta2Text",
-        "label": "CTA 2 Text",
-        "value": "I'm an experienced professional"
-      },
-      {
-        "component": "aem-content",
-        "name": "cta2Link",
-        "label": "CTA 2 Link"
       }
     ]
   },
@@ -332,7 +280,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "sectionTitle",
+        "name": "title",
         "label": "Section Title",
         "value": "Products & Platforms"
       },
