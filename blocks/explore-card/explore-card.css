@@ -1,0 +1,155 @@
+.explore-card-container {
+  background-color: #fff;
+}
+
+.explore-card-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.explore-card {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  min-height: 800px;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #1f1f1f;
+  text-align: center;
+}
+
+.explore-card > :not(.explore-card-background) {
+  position: relative;
+  z-index: 1;
+}
+
+.explore-card .explore-card-background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+.explore-card p {
+  margin: 0;
+}
+
+.explore-card .explore-card-background > div,
+.explore-card .explore-card-background p,
+.explore-card .explore-card-background picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.explore-card .explore-card-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.explore-card .explore-card-heading {
+  max-width: 1120px;
+  font-family: var(--body-font-family);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.explore-card .explore-card-description {
+  max-width: 1040px;
+  margin-top: 38px;
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.explore-card .explore-card-suggestions {
+  max-width: 1120px;
+  margin-top: 42px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 10px;
+}
+
+.explore-card .explore-card-suggestion {
+  box-sizing: border-box;
+  border: 1px solid #777;
+  border-radius: 999px;
+  padding: 8px 20px;
+  background-color: rgb(255 255 255 / 55%);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.explore-card .explore-card-suggestion:empty {
+  display: none;
+}
+
+.explore-card .explore-card-cta {
+  margin-top: 38px;
+}
+
+.explore-card .explore-card-cta a:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 12px 16px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: normal;
+}
+
+.explore-card .explore-card-cta a::after {
+  content: '\2192';
+  font-size: 20px;
+  line-height: 0.8;
+}
+
+.explore-card .explore-card-cta a:hover,
+.explore-card .explore-card-cta a:focus {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (width < 600px) {
+  .explore-card {
+    min-height: 640px;
+    padding: 64px 20px;
+  }
+
+  .explore-card .explore-card-heading {
+    font-size: 36px;
+  }
+
+  .explore-card .explore-card-description {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+
+  .explore-card .explore-card-suggestions {
+    margin-top: 30px;
+  }
+
+  .explore-card .explore-card-suggestion {
+    padding: 8px 14px;
+    font-size: 16px;
+  }
+
+  .explore-card .explore-card-cta {
+    margin-top: 30px;
+  }
+}
