@@ -1,0 +1,92 @@
+.call-to-action-container {
+  background-color: #fff;
+}
+
+.call-to-action-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.call-to-action {
+  box-sizing: border-box;
+  min-height: 531px;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #242424;
+  text-align: center;
+}
+
+.call-to-action > div > div {
+  max-width: 100%;
+}
+
+.call-to-action p {
+  margin: 0;
+}
+
+.call-to-action .call-to-action-heading {
+  font-family: var(--body-font-family);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.call-to-action .call-to-action-description {
+  margin-top: 6px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.call-to-action .call-to-action-cta {
+  margin-top: 26px;
+}
+
+.call-to-action .call-to-action-cta a:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 10px 14px;
+  background-color: #242424;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: normal;
+}
+
+.call-to-action .call-to-action-cta a::after {
+  content: '\2192';
+  font-size: 20px;
+  line-height: 0.8;
+}
+
+.call-to-action .call-to-action-cta a:hover,
+.call-to-action .call-to-action-cta a:focus {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (width < 600px) {
+  .call-to-action {
+    min-height: 420px;
+    padding-inline: 20px;
+  }
+
+  .call-to-action .call-to-action-heading {
+    font-size: 34px;
+  }
+
+  .call-to-action .call-to-action-description {
+    font-size: 19px;
+  }
+}

@@ -142,61 +142,28 @@
     ]
   },
   {
-    "id": "product-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "productName",
-        "label": "Product Name",
-        "value": "BaNCS™"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "description",
-        "label": "Description",
-        "value": "Modernise Banking for the Age of Intelligence: Support transformation across banking, payments and financial services..."
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "text",
-        "label": "CTA Text",
-        "value": "Explore BaNCS"
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "ctaLink",
-        "label": "CTA Link",
-        "value": "/products/bancs"
-      }
-    ]
-  },
-  {
     "id": "call-to-action",
     "fields": [
       {
         "component": "text",
+        "valueType": "string",
         "name": "heading",
         "label": "Heading",
-        "value": "Ready to Partner",
-        "valueType": "string"
+        "value": ""
       },
       {
-        "component": "textarea",
+        "component": "text",
+        "valueType": "string",
         "name": "description",
         "label": "Description",
-        "value": "",
-        "valueType": "string"
+        "value": ""
       },
       {
         "component": "richtext",
-        "name": "actions",
-        "label": "Actions",
-        "value": "",
-        "valueType": "string"
+        "valueType": "string",
+        "name": "cta",
+        "label": "CTA",
+        "value": ""
       }
     ]
   },
@@ -271,32 +238,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "products-platforms",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Section Title",
-        "value": "Products & Platforms"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "viewAllLabel",
-        "label": "View All Label",
-        "value": "View all Products"
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "viewAllLink",
-        "label": "View All Link",
-        "value": "/products"
       }
     ]
   }
