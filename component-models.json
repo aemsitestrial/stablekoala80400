@@ -168,44 +168,6 @@
     ]
   },
   {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "columns",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
     "id": "explore-card",
     "fields": [
       {
@@ -236,42 +198,6 @@
         "label": "Suggestions and CTA",
         "description": "Add each suggestion as a paragraph and add the CTA as a linked paragraph.",
         "value": ""
-      }
-    ]
-  },
-  {
-    "id": "fragment",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "Reference"
-      }
-    ]
-  },
-  {
-    "id": "hero",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
@@ -350,6 +276,40 @@
         "valueType": "string",
         "name": "link",
         "label": "Link",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "tcs-header",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tcsLogo",
+        "label": "TCS Logo",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tataLogo",
+        "label": "Tata Logo",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "language",
+        "label": "Language",
+        "value": "Global (EN)"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "menu",
+        "label": "Menu Links",
+        "description": "Add each mega menu link as a separate linked paragraph.",
         "value": ""
       }
     ]

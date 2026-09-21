@@ -19,28 +19,8 @@
       "fragment",
       "product-platform",
       "explore-card",
-      "overline-card"
-    ]
-  },
-  {
-    "id": "cards",
-    "components": [
-      "card"
-    ]
-  },
-  {
-    "id": "columns",
-    "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
+      "overline-card",
+      "tcs-header"
     ]
   },
   {

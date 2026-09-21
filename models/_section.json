@@ -54,7 +54,8 @@
         "fragment",
         "product-platform",
         "explore-card",
-        "overline-card"
+        "overline-card",
+        "tcs-header"
       ]
     }
   ]
