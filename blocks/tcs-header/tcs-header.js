@@ -21,7 +21,9 @@ export default function decorate(block) {
 
   if (tcsLogo) {
     const tcsLink = document.createElement('a');
-    tcsLink.href = '/';
+    tcsLink.href = 'https://www.tcs.com';
+    tcsLink.target = '_blank';
+    tcsLink.rel = 'noopener noreferrer';
     tcsLink.className = 'tcs-header-logo-link';
     tcsLink.setAttribute('aria-label', 'TCS Home');
     tcsLink.append(tcsLogo);
