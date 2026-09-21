@@ -159,9 +159,9 @@
   text-decoration: none;
 }
 
-.tcs-header-menu a:hover {
+/* .tcs-header-menu a:hover {
   color: var(--link-color);
-}
+} */
 
 @media (width < 900px) {
   .tcs-header {
