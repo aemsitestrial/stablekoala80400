@@ -14,11 +14,30 @@ export default function decorate(block) {
     field.classList.add(fieldClasses[index]);
   });
 
-  const [tcsLogo, tataLogo] = fields;
+  const [tcsLogo, tataLogo, tcsLogoLinkField, tataLogoLinkField] = fields;
+  const tcsLogoLink = tcsLogoLinkField?.textContent.trim();
+  const tataLogoLink = tataLogoLinkField?.textContent.trim();
+
+  tcsLogoLinkField?.remove();
+  tataLogoLinkField?.remove();
   const brand = document.createElement('div');
   brand.className = 'tcs-header-brand';
-  if (tcsLogo) brand.append(tcsLogo);
-  if (tataLogo) brand.append(tataLogo);
+
+  if (tcsLogo) {
+    const tcsAnchor = document.createElement('a');
+    tcsAnchor.href = tcsLogoLink || '/';
+    tcsAnchor.className = 'tcs-header-logo-link';
+    tcsAnchor.append(tcsLogo);
+    brand.append(tcsAnchor);
+  }
+
+  if (tataLogo) {
+    const tataAnchor = document.createElement('a');
+    tataAnchor.href = tataLogoLink || '/';
+    tataAnchor.className = 'tcs-header-logo-link';
+    tataAnchor.append(tataLogo);
+    brand.append(tataAnchor);
+  }
   block.prepend(brand);
 
   const languageField = block.querySelector('.tcs-header-language-value');

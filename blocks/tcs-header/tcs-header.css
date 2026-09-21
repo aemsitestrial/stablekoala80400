@@ -45,6 +45,18 @@
     object-fit: contain;
 }
 
+.tcs-header-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.tcs-header-logo-link:hover,
+.tcs-header-logo-link:focus,
+.tcs-header-logo-link:focus-visible {
+  text-decoration: none;
+}
+
 .tcs-header-tools {
     display: flex;
     align-items: center;
