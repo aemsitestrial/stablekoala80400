@@ -173,3 +173,13 @@
     border-top: 1px solid var(--light-color);
     box-shadow: 0 12px 24px rgb(0 0 0 / 12%);
 }
+
+@media (width <= 1024px) {
+  .tcs-header-language-select {
+    display: none;
+  }
+
+  .tcs-header-tools {
+    gap: 0;
+  }
+}
