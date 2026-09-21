@@ -365,21 +365,11 @@
         "multi": false
       },
       {
-        "component": "aem-content",
-        "name": "tcsLogoLink",
-        "label": "TCS Logo Link"
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "tataLogo",
         "label": "Tata Logo",
         "multi": false
-      },
-      {
-        "component": "aem-content",
-        "name": "tataLogoLink",
-        "label": "Tata Logo Link"
       },
       {
         "component": "text",

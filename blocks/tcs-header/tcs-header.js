@@ -14,30 +14,31 @@ export default function decorate(block) {
     field.classList.add(fieldClasses[index]);
   });
 
-  const [tcsLogo, tataLogo, tcsLogoLinkField, tataLogoLinkField] = fields;
-  const tcsLogoLink = tcsLogoLinkField?.textContent.trim();
-  const tataLogoLink = tataLogoLinkField?.textContent.trim();
+  const [tcsLogo, tataLogo] = fields;
 
-  tcsLogoLinkField?.remove();
-  tataLogoLinkField?.remove();
   const brand = document.createElement('div');
   brand.className = 'tcs-header-brand';
 
   if (tcsLogo) {
-    const tcsAnchor = document.createElement('a');
-    tcsAnchor.href = tcsLogoLink || '/';
-    tcsAnchor.className = 'tcs-header-logo-link';
-    tcsAnchor.append(tcsLogo);
-    brand.append(tcsAnchor);
+    const tcsLink = document.createElement('a');
+    tcsLink.href = '/';
+    tcsLink.className = 'tcs-header-logo-link';
+    tcsLink.setAttribute('aria-label', 'TCS Home');
+    tcsLink.append(tcsLogo);
+    brand.append(tcsLink);
   }
 
   if (tataLogo) {
-    const tataAnchor = document.createElement('a');
-    tataAnchor.href = tataLogoLink || '/';
-    tataAnchor.className = 'tcs-header-logo-link';
-    tataAnchor.append(tataLogo);
-    brand.append(tataAnchor);
+    const tataLink = document.createElement('a');
+    tataLink.href = 'https://www.tata.com';
+    tataLink.target = '_blank';
+    tataLink.rel = 'noopener noreferrer';
+    tataLink.className = 'tcs-header-logo-link';
+    tataLink.setAttribute('aria-label', 'Tata Website');
+    tataLink.append(tataLogo);
+    brand.append(tataLink);
   }
+
   block.prepend(brand);
 
   const languageField = block.querySelector('.tcs-header-language-value');
