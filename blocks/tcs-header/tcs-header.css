@@ -182,4 +182,15 @@
   .tcs-header-tools {
     gap: 0;
   }
+  .tcs-header-tcs-logo img {
+    width: 81.25px;
+    height: 19.37px;
+    object-fit: contain;
+}
+
+.tcs-header-tata-logo img {
+    width: 27.83px;
+    height: 24px;
+    object-fit: contain;
+}
 }
